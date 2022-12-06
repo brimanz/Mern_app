@@ -1,11 +1,20 @@
 import React from 'react'
+import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import Login from './components/auth/Login'
+import NewCount from './components/auth/NewCount'
+import Projects from './components/projects/Projects'
+
 
 
 function App() {
   return (
-    <div className="App">
-      <h2>hola mundo desde react</h2>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={Login}/>
+        <Route exact path="/new-count" component={NewCount}/>
+        <Route exact path="/projects" component={Projects}/>
+      </Switch>
+    </BrowserRouter>
   )
 }
 
