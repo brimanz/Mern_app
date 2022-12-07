@@ -5,7 +5,6 @@ import NewCount from './components/auth/NewCount'
 import Projects from './components/projects/Projects'
 
 
-
 function App() {
   return (
     <BrowserRouter>
