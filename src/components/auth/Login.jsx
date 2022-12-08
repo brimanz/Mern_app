@@ -1,10 +1,32 @@
-import React from 'react'
+import React, {useState} from 'react'
+import {Link} from 'react-router-dom'
 
 
 const Login = () =>{
 	
-	const onChange = () =>{
+	const [user, setUser] = useState({
+		email: '',
+		password: ''
+	});
 
+	const {email, password} = user;
+
+
+	const onChange = e =>{
+		setUser({
+			...user,
+			[e.target.name] : e.target.value
+		})
+	}
+
+	const onSubmit = e =>{
+		e.preventDefault();
+
+
+		//validate zone
+
+
+		//send to action
 	}
 
 
@@ -13,7 +35,9 @@ const Login = () =>{
 			<div className="contenedor-form sombra-dark">
 				<h1>Iniciar Sesión</h1>
 
-				<form>
+				<form
+					onSubmit={onSubmit}
+				>
 					<div className="campo-form">
 						<label htmlFor="email">Email</label>
 						<input
@@ -22,6 +46,7 @@ const Login = () =>{
 							name="email"
 							placeholder="Ingresa tu Email"
 							onChange={onChange}
+							value={email}
 						/>
 					</div>
 
@@ -33,6 +58,7 @@ const Login = () =>{
 							name="password"
 							placeholder="Ingresa tu Password"
 							onChange={onChange}
+							value={password}
 						/>
 					</div>
 
@@ -44,6 +70,10 @@ const Login = () =>{
 						/>
 					</div>
 				</form>
+
+				<Link to={'/new-count'} className="enlace-cuenta">
+					Create count
+				</Link>
 			</div>
 		</div>
 	);
