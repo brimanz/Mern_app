@@ -1,7 +1,32 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 
 const NewProject = () =>{
+
+	const [project, setProject] = useState({
+		name: ''
+	});
+
+	const onChangeProject = e =>{
+		setProject({
+			...project,
+			[e.target.name] : e.target.value
+		})
+	}
+
+	const {name} = project	
+
+	const onSubmitProject = e =>{
+		e.preventDefault(); 
+
+
+		//validate zone
+
+
+		//form reset
+	}
+
+
 	return(
 		<>
 			<button
@@ -13,12 +38,15 @@ const NewProject = () =>{
 
 			<form
 				className="formulario-nuevo-proyecto"
+				onSubmit={onSubmitProject}
 			>
 				<input
 					type="text"
 					className="input-text"
 					placeholder="New Project"
 					name="name"
+					value={name}
+					onChange={onChangeProject}
 				/>
 
 				<input
