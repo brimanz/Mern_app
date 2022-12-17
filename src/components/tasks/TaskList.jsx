@@ -5,10 +5,10 @@ import Task from './Task'
 const TaskList = () =>{
 	
 	const projectTaks = [
-		{nombre: "Elegir Plataforma", estado: true},
-		{nombre: "Elegir colores", estado: false},
-		{nombre: "Elegir Plataforma de pago", estado: false},
-		{nombre: "Elegir hosting", estado: true}
+		{name: "Elegir Plataforma", estado: true},
+		{name: "Elegir colores", estado: false},
+		{name: "Elegir Plataforma de pago", estado: false},
+		{name: "Elegir hosting", estado: true}
 	];
 
 	return(
