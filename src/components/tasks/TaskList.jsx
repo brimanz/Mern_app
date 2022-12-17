@@ -32,6 +32,15 @@ const TaskList = () =>{
 					))
 				}
 			</ul>
+
+			<button
+				type="button"
+				className="btn btn-eliminar"
+			>
+				Delete Project &times;
+			</button>
+
+
 		</>
 	);
 }
