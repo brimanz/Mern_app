@@ -33,7 +33,7 @@ const NewProject = () =>{
 				type="button"
 				className="btn btn-block btn-primario"
 			>
-				Nuevo Proyecto	
+				New Project	
 			</button>
 
 			<form
