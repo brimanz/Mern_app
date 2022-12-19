@@ -7,7 +7,6 @@ import Projects from './components/projects/Projects'
 import ProjectState from './context/projects/projectState'
 
 
-
 function App() {
   return (
     <ProjectState>
