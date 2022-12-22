@@ -5,7 +5,7 @@ import projectContext from '../../context/projects/projectContext'
 const NewProject = () =>{
 
 	const projectsContext = useContext(projectContext);
-	const {form} = projectsContext;
+	const {form, showForm} = projectsContext;
 
 
 	const [project, setProject] = useState({
@@ -37,6 +37,7 @@ const NewProject = () =>{
 			<button
 				type="button"
 				className="btn btn-block btn-primario"
+				onClick={showForm}
 			>
 				New Project	
 			</button>
