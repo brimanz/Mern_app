@@ -7,7 +7,6 @@ const NewProject = () =>{
 	const projectsContext = useContext(projectContext);
 	const {form, showForm} = projectsContext;
 
-
 	const [project, setProject] = useState({
 		name: ''
 	});
@@ -67,9 +66,7 @@ const NewProject = () =>{
 				)
 				: null
 			}
-			
 		</>
-
 	);
 }
 
